@@ -93,3 +93,4 @@ insert into registro (rut,fecha) values ('12813232-5','2022-07-10 18:04:00:000')
 
 
 
+SELECT * FROM funcionarios
