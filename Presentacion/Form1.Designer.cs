@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class Form1
+    partial class FrmCalcular
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbMes
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(190, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(266, 23);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Meses del Año";
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Location = new System.Drawing.Point(190, 34);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(266, 23);
+            this.cmbMes.TabIndex = 0;
+            this.cmbMes.Text = "Meses del Año";
             // 
             // button1
             // 
@@ -62,16 +62,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(638, 150);
             this.dataGridView1.TabIndex = 2;
             // 
-            // Form1
+            // FrmCalcular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 388);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Name = "Form1";
+            this.Controls.Add(this.cmbMes);
+            this.Name = "FrmCalcular";
             this.Text = "Calcula Horas Extras trabajadas";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -79,7 +80,7 @@
 
         #endregion
 
-        private ComboBox comboBox1;
+        private ComboBox cmbMes;
         private Button button1;
         private DataGridView dataGridView1;
     }

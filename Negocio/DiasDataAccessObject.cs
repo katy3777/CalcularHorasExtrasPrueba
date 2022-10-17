@@ -11,18 +11,16 @@ namespace Negocio
             List<Dias> list_permisos = new List<Dias>();
             try
             {
-                string query = "select  mes from dbo.dias; ";
+                string query = "select nombre_mes from dbo.dias; ";
 
-                System.Data.Lista<Dias> lD = conexionDBUtils.EjecutarSelect(query);
+                System.Data.DataTable dt = conexionDBUtils.EjecutarSelect(query);
                 if (dt.Rows != null)
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        Dias dias = new dias();
-                        dias.Id = (int)dr[0];
-                        permiso.NombrePermiso = (string)dr[1];
-
-                        list_permisos.Add(permiso);
+                        Dias dias = new Dias();
+                        dias.Nombre_mes =(string) dr[0];
+                        list_permisos.Add(dias);
                     }
                 }
             }
