@@ -6,21 +6,24 @@ namespace Negocio
     public class DiasDataAccessObject
     {
         private ConexionDBUtils conexionDBUtils = ConexionDBUtils.ObtenerInstancia();
-        public List<Dias> obtenerLista() {
+        public List<MesInfo> obtenerLista() {
 
-            List<Dias> list_permisos = new List<Dias>();
+            List<MesInfo> lista_mesInfo = new List<MesInfo>();
             try
             {
-                string query = "select nombre_mes from dbo.dias; ";
+                string query = "select mes, nombre_mes,dias from dbo.dias; ";
 
                 System.Data.DataTable dt = conexionDBUtils.EjecutarSelect(query);
                 if (dt.Rows != null)
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        Dias dias = new Dias();
-                        dias.Nombre_mes =(string) dr[0];
-                        list_permisos.Add(dias);
+                        MesInfo mesInfo = new MesInfo();
+                        mesInfo.Mes = (int)dr[0];
+                        mesInfo.Nombre_mes= (string)dr[1];
+                        mesInfo.Dia= (int)dr[2];
+
+                        lista_mesInfo.Add(mesInfo);
                     }
                 }
             }
@@ -28,7 +31,7 @@ namespace Negocio
             {
                 throw e;
             }
-            return list_permisos;
+            return lista_mesInfo;
         }
     } 
 } 

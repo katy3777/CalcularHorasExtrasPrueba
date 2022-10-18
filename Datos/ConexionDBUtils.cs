@@ -11,10 +11,10 @@ namespace Datos
 
         private ConexionDBUtils()
         {
-            this._sqlConnection = new SqlConnection("Data Source=LAPTOP-17QUAAHH\\SQLEXPRESS;" +
+            this._sqlConnection = new SqlConnection("Data Source=localhost;" +
                                                 "Initial Catalog=CalcularHorasExtrasPrueba;" +
                                                 "User ID=sa;" +
-                                                "Password=12345678;");
+                                                "Password=sa_pwd_2623141;");
         }
         public static ConexionDBUtils ObtenerInstancia()
         {

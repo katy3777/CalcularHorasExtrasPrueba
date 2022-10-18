@@ -28,48 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbMes = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBoxProcesarMes = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmbMes
-            // 
-            this.cmbMes.FormattingEnabled = true;
-            this.cmbMes.Location = new System.Drawing.Point(190, 34);
-            this.cmbMes.Name = "cmbMes";
-            this.cmbMes.Size = new System.Drawing.Size(266, 23);
-            this.cmbMes.TabIndex = 0;
-            this.cmbMes.Text = "Meses del Año";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(248, 324);
+            this.button1.Location = new System.Drawing.Point(283, 432);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 57);
+            this.button1.Size = new System.Drawing.Size(179, 76);
             this.button1.TabIndex = 1;
             this.button1.Text = "Calcular";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 147);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 196);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(638, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(729, 200);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // comboBoxProcesarMes
+            // 
+            this.comboBoxProcesarMes.FormattingEnabled = true;
+            this.comboBoxProcesarMes.Location = new System.Drawing.Point(178, 65);
+            this.comboBoxProcesarMes.Name = "comboBoxProcesarMes";
+            this.comboBoxProcesarMes.Size = new System.Drawing.Size(485, 28);
+            this.comboBoxProcesarMes.TabIndex = 3;
             // 
             // FrmCalcular
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 388);
+            this.ClientSize = new System.Drawing.Size(807, 517);
+            this.Controls.Add(this.comboBoxProcesarMes);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cmbMes);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmCalcular";
             this.Text = "Calcula Horas Extras trabajadas";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -79,9 +83,8 @@
         }
 
         #endregion
-
-        private ComboBox cmbMes;
         private Button button1;
         private DataGridView dataGridView1;
+        private ComboBox comboBoxProcesarMes;
     }
 }

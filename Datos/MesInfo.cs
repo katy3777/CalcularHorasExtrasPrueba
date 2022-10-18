@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class Dias
+    public class MesInfo 
     {
         public int Mes { get; set; }
         public int Dia { get; set; }
